@@ -36,6 +36,9 @@ export function Login() {
         if (response.status === 404) {
           setAuthError("User not found, please sign up.")
           return
+        } else if (response.status === 403) {
+          setAuthError("Credentials not valid, please try again")
+          return
         }
         setAuthError('Something went wrong with the signin process, please try again')
         return
@@ -82,6 +85,9 @@ export function SignUp() {
 
     if (!(username || password)) {
       setAuthError("Please fill all of the fields")
+      return
+    } else if (password.length < 8) {
+      setAuthError("Password must be at least 8 characters long")
       return
     }
 
