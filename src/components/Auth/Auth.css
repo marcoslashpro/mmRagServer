@@ -1,0 +1,82 @@
+.AuthContainer {
+  background-color: black;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Auth {
+  color: grey;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid white;
+  margin: 20px;
+}
+
+.AuthBtn {
+  align-self: center;
+}
+
+.AuthInput {
+  margin: 3px;
+}
+
+.AuthLabel {
+  align-self: center;
+}
+
+.AuthAlert {
+  justify-self: flex-start;
+  align-self: center;
+}
+
+.AuthBtn {
+  background-color: inherit;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.AuthManagement {
+  background-color: rgb(12, 12, 12);
+  color: white;
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 0px;
+  justify-self: center;
+  align-self: center;
+  margin-top: 20px;
+  width: 50%;
+}
+
+.AuthNav {
+  background-color: inherit !important;
+  border-right: 1px solid white;
+  border-radius: 10px 0px 0px 10px;
+  margin-right: 10px;
+}
+
+.AuthDisplay {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin: 5px;
+  align-content: start;
+}
+
+.AuthList {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.AuthLink {
+  color: white;
+  justify-self: center;
+}

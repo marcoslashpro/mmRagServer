@@ -1,0 +1,8 @@
+.InputBar {
+  background-color: black;
+  border-radius: 20px;
+  padding: 5px;
+  flex: 1;
+  color: grey;
+  flex-wrap: wrap;
+}

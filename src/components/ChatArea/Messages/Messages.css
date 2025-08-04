@@ -1,0 +1,16 @@
+.AIMessage {
+  padding: 5px;
+  color: rgb(180, 174, 174);
+  margin: 15px;
+}
+
+.HumanMessage {
+  align-self: end;
+  padding: 15px;
+  background-color: rgb(12, 12, 12);
+  color: grey;
+  box-shadow: 1px 3px 2px 1px rgb(5, 5, 5);
+  border-radius: 20px 5px 20px 20px;
+  margin: 5px;
+  max-width: 75%;
+}

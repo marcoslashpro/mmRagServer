@@ -1,0 +1,13 @@
+.InputArea {
+  grid-row-start: 23;
+  grid-column-start: 7;
+  grid-column-end: 20;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5px;
+  padding: 10px;
+  background-color: rgb(12, 12, 12);
+  border-radius: 20px;
+  box-shadow: 1px 3px 3px rgb(9, 8, 8);
+}

@@ -1,0 +1,18 @@
+.AddFile {
+  align-self: center;
+  color: grey;
+  text-decoration: none;
+  background-color: inherit;
+  border: none;
+  margin: 5px;
+}
+
+.AddFileBtn {
+  color: grey;
+  text-decoration: none;
+  background-color: inherit;
+  border: none;
+  margin: 5px;
+  padding-top: 10px;
+  font-size: 16px;
+}

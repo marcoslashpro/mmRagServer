@@ -1,0 +1,6 @@
+.File {
+  color: white;
+  margin: 5px;
+  display: flex;
+  justify-content: space-between;
+}

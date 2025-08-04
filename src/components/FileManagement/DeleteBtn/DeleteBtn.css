@@ -1,0 +1,8 @@
+.DeleteBtn {
+  text-decoration: none;
+  background-color: inherit;
+  border: none;
+  margin: 2px;
+  font-size: 10px;
+  color: grey;
+}

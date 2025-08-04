@@ -1,0 +1,11 @@
+.FileManagement {
+  background-color: rgb(12, 12, 12);
+  color: white;
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 7px 10px 7px 5px;
+  justify-self: center;
+  align-self: center;
+  margin-top: 20px;
+  flex-direction: column;
+}
