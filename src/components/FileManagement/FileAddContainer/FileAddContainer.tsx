@@ -19,7 +19,7 @@ export default function FileAddContainer({ added, setAdded, loaded, setLoaded })
     let data = new FormData()
     data.append("file", file, file.name)
 
-    const uploadUrl = `${process.env.REACT_APP_URL}/files/upload/`
+    const uploadUrl = `https://0jl0v93oi5.execute-api.eu-central-1.amazonaws.com/files/upload/`
     const payload = {
       body: data,
       headers: {

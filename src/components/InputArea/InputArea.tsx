@@ -6,7 +6,7 @@ import { Message } from '../../data.ts'
 
 export default function InputArea({ messagesState, setMessagesState, errorState, setErrorState}) {
   async function sendMessage(message: Message): Promise<Response | undefined> {
-    const chatURL = `${process.env.REACT_APP_URL}/chat`
+    const chatURL = `https://0jl0v93oi5.execute-api.eu-central-1.amazonaws.com/chat`
     const payload = {
       body: JSON.stringify({query: message.content}),
       headers: {

@@ -2,12 +2,10 @@ import './NavBar.css'
 import { FileManagement } from '../FileManagement/FileManagement.tsx'
 import { AuthManagement } from '../Auth/Auth.tsx'
 import { useEffect, useState } from 'react'
-import { url } from '../../constants.ts'
 
 
 export default function NavBar({ errorState, setErrorState }) {
   const [fileDisplay, setFileDisplay] = useState<boolean>(false)
-  const [authDisplay, setAuthDisplay] = useState<"flex" | "none">("none")
 
   const [files, setFiles] = useState(new Map())
   const [removed, setRemoved] = useState(false)
@@ -15,7 +13,7 @@ export default function NavBar({ errorState, setErrorState }) {
   const [loaded, setLoaded] = useState<null | boolean>(null)
 
   async function fetchFiles(): Promise<any | undefined> {
-    const filesUrl = url + '/files/retrieve/user/'
+    const filesUrl = 'https://0jl0v93oi5.execute-api.eu-central-1.amazonaws.com/files/retrieve/user/'
     const payload = {
       headers: {
         "Authorization": `Bearer ${localStorage.getItem('user')}`,
@@ -45,28 +43,7 @@ export default function NavBar({ errorState, setErrorState }) {
 
   const handleFileDisplay = () => {
     if (fileDisplay === false) {
-      switch (authDisplay) {
-        case 'flex': setAuthDisplay("none"); setFileDisplay(true)
-        case 'none': setFileDisplay(true)
-      }
     } else if (fileDisplay === true) {
-      switch (authDisplay) {
-        case 'flex': break
-        case 'none': setFileDisplay(false)
-      }
-    }
-  }
-
-  const handleAuthDisplay = () => {
-    if (authDisplay === 'none') {
-      if (fileDisplay === true) {
-        setAuthDisplay("flex")
-        setFileDisplay(false)
-      } else {
-        setAuthDisplay("flex")
-      }
-    } else if (authDisplay === 'flex') {
-      setAuthDisplay("none")
     }
   }
 
@@ -75,7 +52,7 @@ export default function NavBar({ errorState, setErrorState }) {
     <div className='NavBar'>
       <button
         className={"ModalHandler"}
-        onClick={() => handleFileDisplay()}>🔍</button>
+        onClick={() => setFileDisplay(!fileDisplay)}>🔍</button>
       <FileManagement
         open={fileDisplay}
         files={files}
@@ -86,10 +63,7 @@ export default function NavBar({ errorState, setErrorState }) {
         loaded={loaded}
         setLoaded={setLoaded}
         />
-      <button className='AuthBtn' onClick={() => handleAuthDisplay()}>
-        🔑
-      </button>
-      <AuthManagement display={authDisplay}/>
+      <AuthManagement />
     </div>
     </>
   )

@@ -6,6 +6,10 @@
   justify-content: center;
 }
 
+.AuthContainer p {
+  font-size: 12px;
+}
+
 .Auth {
   color: grey;
   align-self: center;
@@ -33,50 +37,20 @@
   align-self: center;
 }
 
-.AuthBtn {
-  background-color: inherit;
-  border: none;
-  margin-bottom: 10px;
-}
-
-.AuthManagement {
-  background-color: rgb(12, 12, 12);
-  color: white;
-  border: 1px solid grey;
-  border-radius: 10px;
-  padding: 0px;
-  justify-self: center;
+.AuthHeader {
+  color: grey;
   align-self: center;
-  margin-top: 20px;
-  width: 50%;
-}
-
-.AuthNav {
-  background-color: inherit !important;
-  border-right: 1px solid white;
-  border-radius: 10px 0px 0px 10px;
-  margin-right: 10px;
-}
-
-.AuthDisplay {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  margin: 5px;
-  align-content: start;
-}
-
-.AuthList {
-  list-style: none;
-  padding: 0px;
-  margin: 0px;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  padding: 5px;
+  border: 1px solid grey;
+  padding: 5px; 
 }
 
 .AuthLink {
-  color: white;
+  color: grey;
   justify-self: center;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.AuthLink:hover {
+  color: white;
 }

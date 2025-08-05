@@ -7,7 +7,7 @@ export default function DeleteBtn({ ids, removed, setRemoved, errorState, setErr
 
   async function handleClick(ids: Array<string>) {
     setBtnClicked(true)
-    let deleteUrl = `${process.env.REACT_APP_URL}/files/delete/?`
+    let deleteUrl = `https://0jl0v93oi5.execute-api.eu-central-1.amazonaws.com/files/delete/?`
 
     for (let i=0;i<ids.length;i++) {
       if (i === 0) {

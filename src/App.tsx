@@ -13,6 +13,10 @@ function App() {
 
   return (
     <>
+    <head>
+      <title>Multimodal Rag</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
       <Routes>
         <Route path='/' element={
           <Main 
